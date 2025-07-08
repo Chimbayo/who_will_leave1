@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>All Customers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='images/icons8-prediction-64.png') }}"
+                 alt="Icon" class="nav-icon">
+            <span class="nav-title">All Customers</span>
+        </div>
+        <div class="nav-right">
+            <a href="/churn" class="nav-link">Dashboard</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/contacts" class="nav-link">Contacts</a>
+            <a href="/index" class="nav-link text-red-600">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-8">
+        <h2 class="text-2xl font-bold mb-4">All Customers in Database</h2>
+
+        <table id="results-table" class="w-full border-collapse table-auto">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="p-3 text-left">Customer ID</th>
+                    <th class="p-3 text-left">Age</th>
+                    <th class="p-3 text-left">Gender</th>
+                    <th class="p-3 text-left">District</th>
+                    <th class="p-3 text-left">Region</th>
+                    <th class="p-3 text-left">Location Type</th>
+                    <th class="p-3 text-left">Customer Type</th>
+                    <th class="p-3 text-left">Employment Status</th>
+                    <th class="p-3 text-left">Income Level</th>
+                    <th class="p-3 text-left">Education Level</th>
+                    <th class="p-3 text-left">Tenure (years)</th>
+                    <th class="p-3 text-left">Balance</th>
+                    <th class="p-3 text-left">Credit Score</th>
+                    <th class="p-3 text-left">Outstanding Loans</th>
+                    <th class="p-3 text-left">Products Count</th>
+                    <th class="p-3 text-left">Mobile Banking</th>
+                    <th class="p-3 text-left">Transactions/Month</th>
+                    <th class="p-3 text-left">Complaints</th>
+                    <th class="p-3 text-left">Branch Distance (km)</th>
+                    <th class="p-3 text-left">Network Quality</th>
+                    <th class="p-3 text-left">Owns Mobile</th>
+                    <th class="p-3 text-left">Prediction</th>
+                    <th class="p-3 text-left">Probability</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <!-- Populated by JS -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

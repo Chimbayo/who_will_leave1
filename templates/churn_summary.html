@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Churn Analytics Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+    nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #4a89dc;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.text-red-600 {
+    color: #e9573f;
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="/static/images/icons8-prediction-64.png">
+            <span class="nav-title">Churn Analytics Summary</span>
+        </div>
+        <div class="nav-right">
+            <a href="/churn" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/contacts" class="nav-link">Contacts</a>
+            <a href="/" class="nav-link text-red-600">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 20px;">
+        <h2>Churn Analytics Summary</h2>
+        <div id="churn-summary-charts">Loading charts...</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/churn_summary.js') }}"></script>
+</body>
+</html>
+
