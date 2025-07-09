@@ -4,6 +4,7 @@ import joblib  # For loading the trained machine learning model
 import numpy as np  # For numerical operations
 import pandas as pd  # For data manipulation (if needed)
 import psycopg2
+import psycopg
 from psycopg2.extras import RealDictCursor
 import os
 import random
